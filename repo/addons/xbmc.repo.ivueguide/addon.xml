@@ -1,15 +1,15 @@
-<addon id="xbmc.repo.FreeVueGuide" name="DynamicTV Repo" version="0.0.2" provider-name="dTV">
-	<extension point="xbmc.addon.repository" name="FreeVueGuide Repo Add-ons Repository">
+<addon id="xbmc.repo.ivueguide" name="iVue2 TV Guide Repo" version="0.0.2" provider-name="iVue">
+	<extension point="xbmc.addon.repository" name="iVue2 TV Guide Add-ons Repository">
 		<dir>
-		    <info compressed="false">https://raw.githubusercontent.com/totaltec2014/FreeVueGuide/master/addons.xml</info>
-		    <checksum>https://raw.githubusercontent.com/totaltec2014/FreeVueGuide/master/addons.xml.md5</checksum>
-		    <datadir zip="true">https://raw.githubusercontent.com/totaltec2014/FreeVueGuide/master/</datadir>
+		    <info compressed="false">https://raw.githubusercontent.com/totaltec2014/ivue2/master/addons.xml</info>
+		    <checksum>https://raw.githubusercontent.com/totaltec2014/ivue2/master/addons.xml.md5</checksum>
+		    <datadir zip="true">https://raw.githubusercontent.com/totaltec2014/ivue2/master/</datadir>
 		</dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary>Install FreeVueGuide Repo </summary>
-		<description>Download and install for Team FreeVueIPTV Repo addons </description>
-		<disclaimer> Repo for Team FreeVueIPTV Repo addon </disclaimer>
+		<summary>Install iVue2 TV Guide </summary>
+		<description>Download and install for iVue2 Tv guide addons </description>
+		<disclaimer> Repo for iVue2 Tv guide addon </disclaimer>
 		<platform>all</platform>
 		<assets>
             <icon>icon.png</icon>

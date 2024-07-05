@@ -1,4 +1,4 @@
-script.FreeVueGuide
+script.ivueguide
 ===============
 
 Ivue Guide allows you to combine some of your favourite live TV plugins for use with a fully working EPG.

@@ -18,4 +18,4 @@ The JDM Team working with IVUE team to deliver new improvements and features.
 
  tidy up addons ini and add BBCiplayerwww,  ITV 
 
- now able to use second ini from custom selection ( needs to be called dtv_sub_list.ini) will automerge
+ now able to use second ini from custom selection ( needs to be called addons2.ini) will automerge

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.IPTVsubscriber"
+<addon id="plugin.video.IVUEcreator"
 version="1.0.1"
-name="IPTVsubscriber"
-provider-name="Team FreeVueIPTV">
+name="IVUEcreator"
+provider-name="Team IVUE">
 <requires>
   <import addon="script.module.xbmcswift2" version="2.4.0"/>
   <import addon="script.module.requests" version="2.9.1" />
@@ -11,8 +11,8 @@ provider-name="Team FreeVueIPTV">
   <provides>video</provides>
 </extension>
 <extension point="xbmc.addon.metadata">
-  <summary lang="en">IPTVsubscriber</summary>
-  <description lang="en">Integrate any plugin installed to DTV-Guide easily and quickly</description>
+  <summary lang="en">IVUECreator</summary>
+  <description lang="en">Integrate any plugin installed to IVUE guide easily and quickly</description>
   <description lang="en">Now includes a fully functioning back up and restore feature</description>
   <disclaimer lang="en">Modified by TeamJDM from the original code from "Primeaval" </disclaimer>
   <assets>

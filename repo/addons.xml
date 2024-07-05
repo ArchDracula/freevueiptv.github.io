@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.IPTVsubscriber"
+
+
+
+
+<addon id="plugin.video.IVUEcreator"
 version="1.0.1"
-name="IPTVsubscriber"
-provider-name="Team FreeVueIPTV">
+name="IVUEcreator"
+provider-name="Team IVUE">
 <requires>
   <import addon="script.module.xbmcswift2" version="2.4.0"/>
   <import addon="script.module.requests" version="2.9.1" />
@@ -12,8 +16,8 @@ provider-name="Team FreeVueIPTV">
   <provides>video</provides>
 </extension>
 <extension point="xbmc.addon.metadata">
-  <summary lang="en">IPTVsubscriber</summary>
-  <description lang="en">Integrate any plugin installed to DTV-Guide easily and quickly</description>
+  <summary lang="en">IVUECreator</summary>
+  <description lang="en">Integrate any plugin installed to IVUE guide easily and quickly</description>
   <description lang="en">Now includes a fully functioning back up and restore feature</description>
   <disclaimer lang="en">Modified by TeamJDM from the original code from "Primeaval" </disclaimer>
   <assets>
@@ -23,7 +27,7 @@ provider-name="Team FreeVueIPTV">
 </extension>
 </addon>
 
-<addon id="script.FreeVueGuide" name="FreeVueGuide" version="0.0.1" provider-name="Team FreeVueIPTV">
+<addon id="script.ivueguide" name="Ivue TV Guide" version="4.3.2" provider-name="iVue Tv Guide">
 	<requires>
 		<import addon="script.module.simplejson" version="2.0.10"/>
 		<import addon="script.module.beautifulsoup4" />
@@ -45,18 +49,18 @@ provider-name="Team FreeVueIPTV">
 	</extension>
 </addon>
 
-<addon id="xbmc.repo.FreeVueGuide" name="DynamicTV Repo" version="0.0.2" provider-name="dTV">
-	<extension point="xbmc.addon.repository" name="FreeVueGuide Repo Add-ons Repository">
+<addon id="xbmc.repo.ivueguide" name="iVue2 TV Guide Repo" version="0.0.2" provider-name="iVue">
+	<extension point="xbmc.addon.repository" name="iVue2 TV Guide Add-ons Repository">
 		<dir>
-		    <info compressed="false">https://raw.githubusercontent.com/totaltec2014/FreeVueGuide/master/addons.xml</info>
-		    <checksum>https://raw.githubusercontent.com/totaltec2014/FreeVueGuide/master/addons.xml.md5</checksum>
-		    <datadir zip="true">https://raw.githubusercontent.com/totaltec2014/FreeVueGuide/master/</datadir>
+		    <info compressed="false">https://raw.githubusercontent.com/totaltec2014/ivue2/master/addons.xml</info>
+		    <checksum>https://raw.githubusercontent.com/totaltec2014/ivue2/master/addons.xml.md5</checksum>
+		    <datadir zip="true">https://raw.githubusercontent.com/totaltec2014/ivue2/master/</datadir>
 		</dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary>Install FreeVueGuide Repo </summary>
-		<description>Download and install for Team FreeVueIPTV Repo addons </description>
-		<disclaimer> Repo for Team FreeVueIPTV Repo addon </disclaimer>
+		<summary>Install iVue2 TV Guide </summary>
+		<description>Download and install for iVue2 Tv guide addons </description>
+		<disclaimer> Repo for iVue2 Tv guide addon </disclaimer>
 		<platform>all</platform>
 		<assets>
             <icon>icon.png</icon>
@@ -64,4 +68,5 @@ provider-name="Team FreeVueIPTV">
         </assets>
 	</extension>
 </addon>
+
 </addons>

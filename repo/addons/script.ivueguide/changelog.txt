@@ -1,4 +1,4 @@
-DyTV Guide - v0.0.1
+iVue TV Guide - v4.0.3
 
 New Features...
 
