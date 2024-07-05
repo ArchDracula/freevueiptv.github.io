@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog">
+	<allowoverlay>no</allowoverlay>
+	<defaultcontrol always="false">9001</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+    <animation effect="" start="300,0" end="0,0" time="500">WindowOpen</animation>
+    <animation effect="" start="0,0" end="300,0" time="500">WindowClose</animation>
+    <controls>
+
+
+        <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>720</height>
+            <texture>main.jpeg</texture>
+        </control>
+
+           <control type="image">
+                <description>Program logo / Source logo</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1280</width>
+                <height>720</height>
+                <aspectratio></aspectratio>
+                <fadetime>500</fadetime>
+<visible>true</visible>
+               <texture>tvguide-logo-epg.png</texture>
+            </control>
+
+        <control type="videowindow">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>720</height>
+            <visible></visible>
+        </control>
+
+            <control type="image">
+                <description>Program logo / Source logo</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1280</width>
+                <height>720</height>
+                <aspectratio></aspectratio>
+                <fadetime>500</fadetime>
+<visible>true</visible>
+               <texture>black-back_2.png</texture>
+            </control>
+
+            <control type="image">
+                <description>Program logo / Source logo</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1280</width>
+                <height>720</height>
+                <aspectratio></aspectratio>
+                <fadetime>500</fadetime>
+<visible>true</visible>
+               <texture colordiffuse="ff0e597e">blue-back.png</texture>
+            </control>
+
+        <control type="image">
+            <description>logo</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>654</height>
+            <texture>bg(2).png</texture>
+        </control>
+
+        <control type="image">
+            <description>logo</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>60</height>
+            <texture>tvguide-program-grey.png</texture>
+        </control>
+
+
+
+
+        <control type="image">
+            <description>logo</description>
+            <posx>0</posx>
+            <posy>60</posy>
+            <width>1280</width>
+            <height>60</height>
+            <texture flipy="true">tvguide-program-grey.png</texture>
+        </control>
+
+			<control type="image">
+                <description>iVue logo</description>
+                  <posx>-50</posx>
+                <posy>-60</posy>
+                <width>300</width>
+                <height>150</height>
+                <aspectratio>keep</aspectratio>
+                <align> centre</align>
+                <fadetime>500</fadetime>
+                <texture>iVuetvguide-logo_4.png</texture>
+ 
+            </control>
+
+			<control type="image">
+                <description>iVue logo</description>
+                  <posx>1100</posx>
+                <posy>10</posy>
+                <width>200</width>
+                <height>130</height>
+                <aspectratio>keep</aspectratio>
+                <align> centre</align>
+                <fadetime>500</fadetime>
+                <texture>iVuetvguide-logo_3.png</texture>
+ 
+            </control>
+
+        
+        <control type="image">
+            <description>logo</description>
+            <posx>0</posx>
+            <posy>656</posy>
+            <width>1280</width>
+            <height>62</height>
+            <texture>bg(2).png</texture>
+        </control>
+
+        <control type="image">
+            <description>logo</description>
+            <posx>0</posx>
+            <posy>654</posy>
+            <width>1280</width>
+            <height>66</height>
+            <texture>tvguide-program-grey.png</texture>
+        </control>
+
+       <control type="textbox">
+            <description>Description</description>
+            <posx>400</posx>
+            <posy>20</posy>
+            <width>480</width>
+            <height>30</height>
+            <textcolor>ffffffff</textcolor>
+            <font>font13</font>
+            <align>center</align>
+            <aligny>center</aligny>
+            <visible>Control.HasFocus(9000)</visible>
+            <wrapmultiline>true</wrapmultiline>
+            <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+            <pagecontrol>-</pagecontrol>
+            <label>[B]$INFO[Container(9000).ListItem.Label][/B]</label>
+        </control>
+
+       <control type="textbox">
+            <description>Description</description>
+            <posx>400</posx>
+            <posy>50</posy>
+            <width>480</width>
+            <height>75</height>
+            <textcolor>ffffffff</textcolor>
+            <font>font13</font>
+            <align>center</align>
+            <aligny></aligny>
+            <visible>Control.HasFocus(9000)</visible>
+            <wrapmultiline>true</wrapmultiline>
+            <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+            <pagecontrol>-</pagecontrol>
+            <label>$INFO[Container(9000).ListItem.Label2]</label>
+        </control>
+
+      <control type="textbox">
+            <description>Description</description>
+            <posx>175</posx>
+            <posy>30</posy>
+            <width>930</width>
+            <height>75</height>
+            <textcolor>ffffffff</textcolor>
+            <font>font13</font>
+            <align>center</align>
+            <aligny></aligny>
+            <visible>!Control.HasFocus(9000)</visible>
+            <wrapmultiline>true</wrapmultiline>
+            <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+            <pagecontrol>-</pagecontrol>
+            <label>[B]Team FreeVueIPTV[/B][CR]Exit and options menu</label>
+        </control>
+
+
+			<control type="panel" id="9001">
+            <posx>530</posx>
+            <posy>656</posy>
+            <width>1280</width>
+            <height>62</height>
+            <viewtype label="list">list</viewtype>
+            <focusposition>0</focusposition>
+            <onup>9000</onup>
+            <animation effect="slide" start="0,0" end="-110,0" condition="Integer.IsGreater(Container(9001).NumItems,1)">conditional</animation>
+            <itemlayout width="220" height="62">
+                <control type="image"> <!-- Focus Image -->
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>180</width>
+                    <height>40</height>
+                    <texture>frame.png</texture>
+                </control>
+                <control type="label"> <!-- Focus Label -->
+                    <posx>20</posx>
+                    <posy>0</posy>
+                    <width>180</width>
+                    <height>62</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <font>font13</font>
+                    <textcolor>ffffffff</textcolor>
+                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                </control>
+            </itemlayout>
+
+            <focusedlayout width="220" height="62">
+                <control type="image"> <!-- Focus Image -->
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>220</width>
+                    <height>62</height>
+                    <texture>menubutt_focus.png</texture>
+                </control>
+
+                <control type="label"> <!-- Focus Label -->
+                    <posx>20</posx>
+                    <posy>0</posy>
+                    <width>180</width>
+                    <height>62</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <font>font13</font>
+                    <textcolor>ffffffff</textcolor>
+                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                </control>
+
+
+            </focusedlayout>
+
+				<content>
+					<item>
+						<label>Exit iVue</label>
+						<label2></label2>
+						<onclick>SendClick(2000)</onclick>
+					</item>
+				    <item>
+						<label>Stop Stream</label>
+						<onclick>SendClick(2007)</onclick>
+			        <visible>Player.HasMedia</visible>
+					</item>
+				</content>
+			</control>
+
+
+			<control type="panel" id="9000">
+            <posx>175</posx>
+            <posy>190</posy>
+            <width>930</width>
+            <height>400</height>
+            <viewtype label="list">list</viewtype>
+            <focusposition>0</focusposition>
+            <ondown>9001</ondown>
+
+            <itemlayout width="310" height="200">
+
+               <control type="image"> <!-- Focus Image -->
+                    <posx>15</posx>
+                    <posy>0</posy>
+                    <width>280</width>
+                    <height>180</height>
+                    <texture>shortcut.png</texture>
+                </control>
+                <control type="image"> <!-- Focus Image -->
+                    <posx>25</posx>
+                    <posy>40</posy>
+                    <width>261</width>
+                    <height>135</height>
+                    <info>ListItem.Icon</info>
+                </control>
+
+                <control type="image"> <!-- Focus Image -->
+                    <posx>25</posx>
+                    <posy>40</posy>
+                    <width>261</width>
+                    <height>135</height>
+                    <texture colordiffuse="ff0e597e">blue-back.png</texture>
+                </control>
+
+                <control type="label"> <!-- Focus Label -->
+                    <posx>25</posx>
+                    <posy>5</posy>
+                    <width>260</width>
+                    <height>45</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <font>font13</font>
+                    <textcolor>ffffffff</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+            </itemlayout>
+
+            <focusedlayout width="300" height="225">
+               <control type="image"> <!-- Focus Image -->
+                    <posx>15</posx>
+                    <posy>0</posy>
+                    <width>280</width>
+                    <height>180</height>
+                    <texture>shortcut_focus.png</texture>
+                </control>
+                <control type="image"> <!-- Focus Image -->
+                    <posx>25</posx>
+                    <posy>40</posy>
+                    <width>261</width>
+                    <height>135</height>
+                    <info>ListItem.Icon</info>
+                </control>
+
+
+                <control type="image"> <!-- Focus Image -->
+                    <posx>25</posx>
+                    <posy>40</posy>
+                    <width>261</width>
+                    <height>135</height>
+                    <texture colordiffuse="ff0e597e">blue-back.png</texture>
+                </control>
+
+                <control type="label"> <!-- Focus Label -->
+                    <posx>25</posx>
+                    <posy>5</posy>
+                    <width>260</width>
+                    <height>45</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <font>font13</font>
+                    <textcolor>ffffffff</textcolor>
+                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                </control>
+
+
+            </focusedlayout>
+
+				<content>
+				   <item>
+						<label>Categories</label>
+						<label2>Display a list of categories to choose from to refine shown channel listings.</label2>
+						<onclick>SendClick(2001)</onclick>
+                 <icon>categoriesbutton.png</icon>
+					</item>
+
+					<item>
+						<label>Sports Fixtures</label>
+						<label2>Search for upcoming sports events based on sport or region.</label2>
+						<onclick>SendClick(2005)</onclick>
+                 <icon>sportsbutton.png</icon>
+					</item>
+
+					<item>
+						<label>Reminders</label>
+						<label2>Displays all set reminders, can also be used to clear all reminders in one go.</label2>
+						<onclick>SendClick(2003)</onclick>
+                 <icon>plannerbutton.png</icon>
+					</item>
+
+					<item>
+						<label>Search iVue</label>
+						<label2>Search for upcoming shows by title or channel.
+</label2>
+						<onclick>SendClick(2002)</onclick>
+                 <icon>searchbutton.png</icon>
+					</item>
+
+					<item>
+						<label>iVue Schedule</label>
+						<label2>Jump forward to a specific days listings (subject to available EPG info).
+</label2>
+						<onclick>SendClick(2004)</onclick>
+                 <icon>schedulebutton.png</icon>
+					</item>
+
+					<item>
+						<label>iVue Tools</label>
+						<label2>A selection of tools and fixes should they be needed.
+</label2>
+						<onclick>SendClick(2006)</onclick>
+                 <icon>toolsbutton.png</icon>
+					</item>				
+				</content>
+			</control>
+
+        <control type="button" id="2000"><!-- Exit -->
+            <visible>false</visible>
+		</control>
+
+
+        <control type="button" id="2001"><!-- categories -->
+            <visible>false</visible>
+		</control>
+
+        <control type="button" id="2002"><!-- search -->
+            <visible>false</visible>
+		</control>
+
+
+        <control type="button" id="2003"><!-- planner -->
+            <visible>false</visible>
+		</control>
+
+        <control type="button" id="2004"><!-- Schedule -->
+            <visible>false</visible>
+		</control>
+
+        <control type="button" id="2005"><!-- sport-->
+            <visible>false</visible>
+        </control>
+
+        <control type="button" id="2006"><!-- tools -->
+				<visible>false</visible>
+		</control>
+
+        <control type="button" id="2007"><!-- Stop button -->
+			   <visible>false</visible>
+        </control>
+
+
+	</controls>
+</window>

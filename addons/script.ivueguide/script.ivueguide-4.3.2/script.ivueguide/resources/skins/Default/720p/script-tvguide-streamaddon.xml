@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog">
+    <allowoverlay>no</allowoverlay>
+    <defaultcontrol always="true">1000</defaultcontrol>
+    <coordinates>
+        <system>1</system>
+        <posx>200</posx>
+        <posy>190</posy>
+    </coordinates>
+    <animation effect="fade" start="0" end="100" time="250">WindowOpen</animation>
+    <animation effect="fade" start="100" end="0" time="250">WindowClose</animation>
+    <controls>
+        <control type="image">
+            <posx>-10</posx>
+            <posy>-10</posy>
+            <width>900</width>
+            <height>500</height>
+            <texture>bg.png</texture>
+        </control>
+        <control type="image">
+            <posx>3</posx>
+            <posy>3</posy>
+            <width>874</width>
+            <height>474</height>
+            <texture>main.jpeg</texture>
+        </control>
+
+           <control type="image">
+                <description>Program logo / Source logo</description>
+                <posx>3</posx>
+                <posy>3</posy>
+                <width>874</width>
+                <height>474</height>
+                <aspectratio></aspectratio>
+                <fadetime>500</fadetime>
+<visible>true</visible>
+               <texture>tvguide-logo-epg.png</texture>
+            </control>
+
+            <control type="image">
+                <description>Program logo / Source logo</description>
+                <posx>3</posx>
+                <posy>3</posy>
+                <width>874</width>
+                <height>474</height>
+                <aspectratio></aspectratio>
+                <fadetime>500</fadetime>
+<visible>true</visible>
+               <texture>black-back_2.png</texture>
+            </control>
+
+            <control type="image">
+                <description>Program logo / Source logo</description>
+                <posx>3</posx>
+                <posy>3</posy>
+                <width>874</width>
+                <height>474</height>
+                <aspectratio></aspectratio>
+                <fadetime>500</fadetime>
+<visible>true</visible>
+               <texture colordiffuse="ff0e597e">blue-back.png</texture>
+            </control>
+
+
+
+        <control type="label" id="4000">
+            <posx>20</posx>
+            <posy>35</posy>
+            <width>840</width>
+            <height>80</height>
+
+           <textcolor>ffffffff</textcolor>
+            <font>font13</font>
+            <align>center</align>
+            <label>[B]$ADDON[script.FreeVueGuide 30700][/B]</label>
+            <wrapmultiline>true</wrapmultiline>
+
+        </control>
+
+        <control type="panel" id="1000">
+            <posx>40</posx>
+            <posy>100</posy>
+            <width>800</width>
+            <height>380</height>
+            <viewtype label="list">list</viewtype>
+            <orientation>vertical</orientation>
+            <focusposition>1</focusposition>
+
+            <itemlayout width="200" height="195">
+                <control type="image">
+                    <posx>26</posx>
+                    <posy>16</posy>
+                    <width>148</width>
+                    <height>120</height>
+                    <info>ListItem.Icon</info>
+                </control>
+                <control type="label">
+                    <posx>15</posx>
+                    <posy>145</posy>
+                    <width>170</width>
+                    <height>40</height>
+                    <align>center</align>
+                    <font>font12</font>
+                    <textcolor>ffffffff</textcolor>
+                    <info>ListItem.Label</info>
+                </control>
+            </itemlayout>
+            <focusedlayout width="200" height="195">
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>200</width>
+                    <height>180</height>
+                    <texture>menubutt_focus.png</texture>
+                    <visible>Control.HasFocus(1000)</visible>
+                </control>
+                <control type="image">
+                    <posx>26</posx>
+                    <posy>16</posy>
+                    <width>148</width>
+                    <height>128</height>
+                    <info>ListItem.Icon</info>
+                </control>
+                <control type="label">
+                    <posx>15</posx>
+                    <posy>145</posy>
+                    <width>170</width>
+                    <height>40</height>
+                    <align>center</align>
+                    <font>font13</font>
+                    <textcolor>ffffffff</textcolor>
+                    <info>ListItem.Label</info>
+                </control>
+            </focusedlayout>
+        </control>
+    </controls>
+</window>

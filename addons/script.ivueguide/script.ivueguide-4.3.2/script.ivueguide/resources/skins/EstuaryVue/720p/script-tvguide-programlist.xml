@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog">
+    <allowoverlay>no</allowoverlay>
+    <defaultcontrol always="false">1002</defaultcontrol>
+    <coordinates>
+        <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
+    </coordinates>
+
+    <controls>
+
+        <control type="image">
+            <description>background</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>720</height>
+            <texture colordiffuse="FF0E597E">ivuebg.png</texture>
+            <visible>true</visible>
+        </control>
+        
+        <control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+            <texture colordiffuse="330BAA8E">ivuepattern1.jpg</texture>
+		</control>
+
+
+       <control type="image">
+            <description>logo</description>
+            <posx>20</posx>
+            <posy>55</posy>
+            <width>80</width>
+            <height>30</height>
+            <texture>sly.png</texture>
+        </control>
+
+
+            <control type="image" id="1007">
+                <description> logo</description>
+                <posx>14</posx>
+                <posy>88</posy>
+                <width>309</width>
+                <height>174</height>
+                <aligny>top</aligny>
+                <aspectratio></aspectratio>
+                <fadetime>500</fadetime>
+                <texture>-</texture>
+			        <visible>false</visible>
+            </control>
+
+            <control type="image">
+                <description> logo</description>
+                <posx>22</posx>
+                <posy>500</posy>
+                <width>1236</width>
+                <height>174</height>
+                <aspectratio></aspectratio>
+                <fadetime>500</fadetime>
+                <texture>chanbg.png</texture>
+			        <visible>true</visible>
+            </control>
+
+         <control type="videowindow">
+            <posx>14</posx>
+            <posy>87</posy>
+            <width>309</width>
+            <height>176</height>
+        </control>
+
+        <control type="label">
+            <description>Title</description>
+            <posx>325</posx>
+            <posy>510</posy>
+            <width>700</width>
+            <height>30</height>
+            <font>font45</font>
+            <textcolor>ffffffff</textcolor>
+            <align></align>
+            <aligny>center</aligny>
+            <label>$INFO[Container(1002).ListItem.Label]</label>
+            <scroll>true</scroll>
+            <visible>true</visible>
+        </control>
+
+        <control type="label">
+            <description>Title</description>
+            <posx>10</posx>
+            <posy>15</posy>
+            <width>1040</width>
+            <height>40</height>
+            <font>font45</font>
+            <textcolor>FFF0F0F0</textcolor>
+            <align></align>
+            <aligny>center</aligny>
+            <label>iVue / Search - $INFO[Container(1002).ListItem.Property(Header)]</label>
+            <scroll>true</scroll>
+            <visible>String.IsEqual(Control.getLabel(1007),search.png)</visible>
+        </control>
+
+        <control type="label">
+            <description>Title</description>
+            <posx>10</posx>
+            <posy>15</posy>
+            <width>1040</width>
+            <height>40</height>
+            <font>font45</font>
+            <textcolor>FFF0F0F0</textcolor>
+            <align></align>
+            <aligny>center</aligny>
+            <label>iVue / My Planner - $INFO[Container(1002).ListItem.Property(Header)]</label>
+            <scroll>true</scroll>
+            <visible>String.IsEqual(Control.getLabel(1007),planner.png)</visible>
+        </control>
+
+        <control type="label">
+            <description>Title</description>
+            <left>325</left>
+            <top>545</top>
+            <width>945</width>
+            <height>30</height>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+            <align></align>
+            <aligny>center</aligny>
+            <label>$INFO[Container(1002).ListItem.Property(StartTime)] - $INFO[Container(1002).ListItem.Property(When)]</label>
+            <scroll>true</scroll>
+            <visible>true</visible>
+        </control>
+
+
+        <control type="textbox">
+            <description>Description</description>
+            <posx>325</posx>
+            <posy>580</posy>
+            <width>910</width>
+            <height>83</height>
+            <textcolor>ffffffff</textcolor>
+            <font>font13</font>
+            <align></align>
+            <aligny></aligny>
+            <visible>true</visible>
+            <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+            <pagecontrol>-</pagecontrol>
+            <label fallback="NO PROGRAMS FOUND">$INFO[Container(1002).ListItem.Property(Plot)]</label>
+        </control>
+
+            <control type="image">
+                <description> logo</description>
+                <posx>40</posx>
+                <posy>512</posy>
+                <width>265</width>
+                <height>150</height>
+                <aspectratio></aspectratio>
+                <fadetime>500</fadetime>
+                <texture>$INFO[Container(1002).ListItem.Property(ProgramImage)]</texture>
+			        <visible>true</visible>
+            </control>
+
+        <control type="label">
+            <description>Displays todays date</description>
+            <posx>1270</posx>
+            <posy>15</posy>
+            <width>300</width>
+            <height>30</height>
+            <textcolor>FFF0F0F0</textcolor>
+            <font>font_clock</font>
+            <align>right</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label>$INFO[System.Time]</label>
+        </control>
+
+			<control type="panel" id="9001">
+            <posx>15</posx>
+            <posy>290</posy>
+            <width>306</width>
+            <height>400</height>
+            <viewtype label="list">list</viewtype>
+            <focusposition>0</focusposition>
+            <onright>1002</onright>
+
+           <visible>false</visible>
+            <itemlayout width="306" height="40">
+                <control type="label"> <!-- Focus Label -->
+                    <posx>20</posx>
+                    <posy>5</posy>
+                    <width>250</width>
+                    <height>30</height>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font13</font>
+                    <textcolor>ffffffff</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+            </itemlayout>
+
+            <focusedlayout width="306" height="40">
+                <control type="label"> <!-- Focus Label -->
+                    <posx>20</posx>
+                    <posy>5</posy>
+                    <width>250</width>
+                    <height>30</height>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font13</font>
+                    <textcolor>ffffffff</textcolor>
+                    <label>[B]$INFO[ListItem.Label][/B]</label>
+                </control>
+
+                <control type="image"> <!-- Focus Image -->
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>300</width>
+                    <height>40</height>
+                    <texture>frame.png</texture>
+                </control>
+            </focusedlayout>
+
+				<content>
+					<item>
+						<label>TV Guide</label>
+						<onclick>SendClick(999)</onclick>
+					</item>
+
+					<item>
+						<label>Sports Fixtures</label>
+						<onclick>SendClick(1005)</onclick>
+					</item>
+
+					<item>
+						<label>Search iVue</label>
+						<onclick>SendClick(1003)</onclick>
+					</item>
+
+					<item>
+						<label>$INFO[Control.GetLabel(1006)]</label>
+						<onclick>SendClick(1006)</onclick>
+					</item>
+
+					<item>
+						<label>Exit iVue</label>
+						<onclick>SendClick(1004)</onclick>
+					</item>
+				
+
+				</content>
+			</control>
+
+        <control type="button" id="999"><!-- BACK TO GUIDE -->
+			    <visible>false</visible>
+        </control>
+
+        <control type="button" id="1005"><!-- SportsListings -->
+			    <visible>false</visible>
+        </control>
+
+        <control type="button" id="1003"><!-- SEARCH -->
+			    <visible>false</visible>
+        </control>
+
+		<control type="button" id="1006"><!-- MAINMENU -->
+			    <visible>false</visible>
+        </control>
+
+        <control type="button" id="1004"><!-- Exit Guide-->
+			    <visible>false</visible>
+        </control>
+ 
+        <control type="group">
+            <description>Program List</description>
+            <visible>true</visible>
+            <control type="group">
+                <left>-5</left>
+                <top>0</top>
+                <control type="panel" id="1002">
+                    <viewtype label="19030">list</viewtype>
+                    <left>10</left>
+                    <top>60</top>
+                    <width>100%</width>
+                    <height>426</height>
+                    <onup></onup>
+                    <ondown></ondown>
+                    <onleft>9001</onleft>
+                    <onright></onright>
+                    <pagecontrol>-</pagecontrol>
+                    <itemlayout height="102" width="310">
+
+                        <control type="image">
+                            <description>separator image</description>
+                            <left>0</left>
+                            <top>0</top>
+                            <width>340</width>
+                            <height>131</height>
+                            <aspectratio></aspectratio>
+                            <fadetime>500</fadetime>
+                            <texture>chanbg.png</texture>
+                            <bordertexture border="21">iviesshadow.png</bordertexture>
+                            <bordersize>20</bordersize>
+                        </control>
+
+                        <control type="image">
+                            <description>separator image</description>
+                            <left>225</left>
+                            <top>30</top>
+                            <width>85</width>
+                            <height>24</height>
+                            <aspectratio></aspectratio>
+                            <aligny>center</aligny>
+                            <fadetime>500</fadetime>
+                            <info>ListItem.Icon</info>
+                        </control>
+
+                        <control type="label">
+                            <left>35</left>
+                            <top>77</top>
+
+                            <width>260</width>
+                            <height>30</height>
+                            <font>font12</font>
+                            <textcolor>white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                            <animation type="Conditional" condition="String.IsEqual(ListItem.Property(When),On Now)">
+                            <effect type="slide" start="0,0" end="0,-22" time="0" />
+                            </animation>
+                        </control>
+                        <control type="image">
+                            <left>290</left>
+                            <top>62</top>
+                            <width>17</width>
+                            <height>17</height>
+                            <texture>$INFO[ListItem.Property(Remind),buttonicons/]</texture>
+                            <aligny>center</aligny>
+                        </control>
+                        <control type="label">
+                            <left>35</left>
+                            <top>23</top>
+                            <width>180</width>
+
+                            <height>30</height>
+                            <font>font13</font>
+                            <textcolor>white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <info>ListItem.Property(ChannelName)</info>
+                            <visible>true</visible>
+                        </control>
+                        <control type="label">
+                            <left>35</left>
+                            <top>53</top>
+                            <width>210</width>
+                            <height>30</height>
+                            <font>font12</font>
+                            <textcolor>white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Property(Day)] $INFO[ListItem.Property(StartTime)]</label>
+                            <visible>!String.IsEqual(ListItem.Property(When),On Now)</visible>
+                        </control>
+                        <control type="progress">
+                            <left>35</left>
+                            <top>85</top>
+                            <width>273</width>
+                            <height>20</height>
+                            <lefttexture></lefttexture>
+                            <righttexture></righttexture>
+                            <texturebg border="3"  colordiffuse="ff505050">progress_middle.png</texturebg>
+                            <midtexture border="3" colordiffuse="FF12A0C7">progress_middle.png</midtexture>
+                            <info>ListItem.Property(Completed)</info>
+                            <visible>String.IsEqual(ListItem.Property(When),On Now)</visible>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="100" width="300">
+                        <control type="image">
+                            <description>separator image</description>
+                            <left>0</left>
+                            <top>0</top>
+                            <width>340</width>
+                            <height>131</height>
+                            <aspectratio></aspectratio>
+                            <fadetime>500</fadetime>
+                            <texture>focus.png</texture>
+                            <bordertexture border="21">ivueshadow.png</bordertexture>
+                            <bordersize>20</bordersize>
+                        </control>
+
+                        <control type="image">
+                            <description>separator image</description>
+                            <left>225</left>
+                            <top>30</top>
+                            <width>85</width>
+                            <height>24</height>
+                            <aspectratio></aspectratio>
+                            <aligny>center</aligny>
+                            <fadetime>500</fadetime>
+                            <info>ListItem.Icon</info>
+                        </control>
+
+                        <control type="label">
+                            <left>35</left>
+                            <top>77</top>
+
+                            <width>260</width>
+                            <height>30</height>
+                            <font>font12</font>
+                            <textcolor>white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                            <animation type="Conditional" condition="String.IsEqual(ListItem.Property(When),On Now)">
+                            <effect type="slide" start="0,0" end="0,-22" time="0" />
+                            </animation>
+                        </control>
+                        <control type="image">
+                            <left>290</left>
+                            <top>62</top>
+                            <width>17</width>
+                            <height>17</height>
+                            <texture>$INFO[ListItem.Property(Remind),buttonicons/]</texture>
+                            <aligny>center</aligny>
+                        </control>
+                        <control type="label">
+                            <left>35</left>
+                            <top>23</top>
+                            <width>180</width>
+
+                            <height>30</height>
+                            <font>font13</font>
+                            <textcolor>white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <info>ListItem.Property(ChannelName)</info>
+                            <visible>true</visible>
+                        </control>
+                        <control type="label">
+                            <left>35</left>
+                            <top>53</top>
+                            <width>210</width>
+                            <height>30</height>
+                            <font>font12</font>
+                            <textcolor>white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Property(Day)] $INFO[ListItem.Property(StartTime)]</label>
+                            <visible>!String.IsEqual(ListItem.Property(When),On Now)</visible>
+                        </control>
+                        <control type="progress">
+                            <left>35</left>
+                            <top>85</top>
+                            <width>273</width>
+                            <height>20</height>
+                            <lefttexture></lefttexture>
+                            <righttexture></righttexture>
+                            <texturebg border="3"  colordiffuse="ff505050">progress_middle.png</texturebg>
+                            <midtexture border="3" colordiffuse="FFFFFFFF">progress_middle.png</midtexture>
+                            <info>ListItem.Property(Completed)</info>
+                            <visible>String.IsEqual(ListItem.Property(When),On Now)</visible>
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>
