@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog">
+    <allowoverlay>no</allowoverlay>
+    <defaultcontrol always="false">1000</defaultcontrol>
+    <coordinates>
+        <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
+    </coordinates>
+
+    <controls>
+
+        <control type="image">
+            <description>background</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>720</height>
+            <texture>main.jpeg</texture>
+            <visible>true</visible>
+        </control>
+
+            <control type="image">
+                <description>Program logo / Source logo</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1280</width>
+                <height>720</height>
+                <aspectratio></aspectratio>
+                <fadetime>500</fadetime>
+<visible>true</visible>
+                <texture fallback="tvguide-logo-epg.png">$INFO[Container(1002).ListItem.Property(ProgramImage)]</texture>
+            </control>
+
+        <control type="videowindow">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>720</height>
+            <visible></visible>
+        </control>
+
+            <control type="image">
+                <description>Program logo / Source logo</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1280</width>
+                <height>720</height>
+                <aspectratio></aspectratio>
+                <fadetime>500</fadetime>
+<visible>true</visible>
+               <texture>black-back_2.png</texture>
+            </control>
+
+            <control type="image">
+                <description>Program logo / Source logo</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1280</width>
+                <height>720</height>
+                <aspectratio></aspectratio>
+                <fadetime>500</fadetime>
+<visible>true</visible>
+               <texture colordiffuse="ff0e597e">blue-back.png</texture>
+            </control>
+
+		<control type="image">
+			<posx>0</posx>
+			<posy>222</posy>
+			<width>1280</width>
+			<height>42</height>
+            <texture>bg(2).png</texture>
+            <fadetime>500</fadetime>
+		</control>
+
+
+		<control type="image">
+			<posx>0</posx>
+			<posy>222</posy>
+			<width>1280</width>
+			<height>42</height>
+            <texture>infobar.png</texture>
+            <fadetime>500</fadetime>
+		</control>
+
+
+
+
+        <control type="image">
+            <description>background</description>
+            <posx>1050</posx>
+            <posy>66</posy>
+            <width>190</width>
+            <height>77</height>
+            <texture>iVue.png</texture>
+            <aspectratio></aspectratio>
+            <visible>true</visible>
+        </control>
+        <control type="image" id="1007">
+            <description>background</description>
+            <posx>1073</posx>
+            <posy>125</posy>
+            <width>130</width>
+            <height>23</height>
+            <aspectratio>keep</aspectratio>
+            <visible>true</visible>
+        </control>
+
+
+        <control type="label" id="1001">
+            <description>Title</description>
+            <left>0</left>
+            <top>80</top>
+            <width>300</width>
+            <height>20</height>
+            <font>font13_title</font>
+            <textcolor>orange</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <align></align>
+            <aligny>center</aligny>
+            <label>Title</label>
+            <scroll>true</scroll>
+            <visible>false</visible>
+        </control>
+
+         <control type="image">
+             <description>separator image</description>
+             <posx>595</posx>
+             <posy>10</posy>
+             <width>90</width>
+             <height>20</height>
+             <aspectratio></aspectratio>
+             <fadetime>500</fadetime>
+             <texture>$INFO[Container(1002).ListItem.Icon]</texture>
+             <visible>false</visible>
+         </control>
+
+        <control type="label">
+            <description>Title</description>
+            <left>60</left>
+            <top>0</top>
+            <width>600</width>
+            <height>30</height>
+            <font>font13_title</font>
+            <textcolor>ffffffff</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <align></align>
+            <aligny>center</aligny>
+            <label>[B]$INFO[Container(1002).ListItem.Property(Day)][/B] [B]$INFO[Container(1002).ListItem.Property(StartTime)][/B]</label>
+            <scroll>true</scroll>
+            <visible>true</visible>
+        </control>
+
+        <control type="label">
+            <description>Title</description>
+            <left>60</left>
+            <top>30</top>
+            <width>600</width>
+            <height>30</height>
+            <font>font13_title</font>
+            <textcolor>ff54BFEC</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <align></align>
+            <aligny>center</aligny>
+            <label>[B]$INFO[Container(1002).ListItem.Label][/B]</label>
+            <scroll>true</scroll>
+            <visible>true</visible>
+        </control>
+
+        <control type="label">
+            <description>Title</description>
+            <left>60</left>
+            <top>60</top>
+            <width>600</width>
+            <height>30</height>
+            <font>font13_title</font>
+            <textcolor>ffffffff</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <align></align>
+            <aligny>center</aligny>
+            <label>[B]$INFO[Container(1002).ListItem.Property(When)][/B]</label>
+            <scroll>true</scroll>
+            <visible>true</visible>
+        </control>
+
+        <control type="textbox">
+            <description>Description</description>
+            <left>60</left>
+            <top>100</top>
+            <width>920</width>
+            <height>80</height>
+            <textcolor>ffffffff</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <font>font13</font>
+            <align>left</align>
+            <aligny></aligny>
+            <visible>true</visible>
+            <wrapmultiline>true</wrapmultiline>
+            <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+            <pagecontrol>-</pagecontrol>
+            <label fallback="NO PROGRAMS FOUND">$INFO[Container(1002).ListItem.Property(Plot)]</label>
+        </control>
+
+        <control type="videowindow">
+            <description>video window</description>
+            <posx>1000</posx>
+             <posy>10</posy>
+             <width>240</width>
+             <height>130</height>
+            <visible>true</visible>
+        </control>
+
+        <control type="label">
+            <description>Displays todays date</description>
+            <posx>1050</posx>
+            <posy>0</posy>
+            <width>280</width>
+            <height>30</height>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <font>font13</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <visible>true</visible>
+            <label>[B]$INFO[System.Time(hh:mm:xx)][/B]</label>
+        </control>
+
+        <control type="label">
+            <description>time label</description>
+            <posx>10r</posx>
+            <posy>0</posy>
+            <width>200</width>
+            <height>30</height>
+            <align>right</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>[B]$INFO[System.Date(ddd  DD  mmm)][/B]</label>
+        </control>
+
+        <control type="image">
+            <posx>0</posx>
+            <posy>668</posy>
+            <width>1280</width>
+            <height>52</height>
+            <texture>bg(2).png</texture>
+        </control>
+
+        <control type="image">
+            <posx>0</posx>
+            <posy>668</posy>
+            <width>1280</width>
+            <height>52</height>
+            <texture>tvguide-program-grey.png</texture>
+        </control>
+
+        <control type="button" id="999"><!-- BACK TO GUIDE -->
+            <posx>0</posx>
+            <posy>670</posy>
+            <width>256</width>
+            <height>50</height>
+            <texturefocus>menubutt_focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+            <onup>1002</onup>
+            <ondown>1002</ondown>
+            <onleft>1004</onleft>
+            <onright>1005</onright>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>tvg_font13</font>
+            <textcolor>ffffffff</textcolor>
+			<label>TV Guide</label>
+			<visible>true</visible>
+        </control>
+
+        <control type="button" id="1005"><!-- SportsListings -->
+            <posx>256</posx>
+            <posy>670</posy>
+            <width>256</width>
+            <height>50</height>
+            <texturefocus>menubutt_focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+            <onup>1002</onup>
+            <ondown>1002</ondown>
+            <onleft>999</onleft>
+            <onright>1003</onright>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>tvg_font13</font>
+            <textcolor>ffffffff</textcolor>
+            <label>Sports Listings</label>
+        </control>
+
+
+        <control type="button" id="1003"><!-- SEARCH -->
+            <posx>512</posx>
+            <posy>670</posy>
+            <width>256</width>
+            <height>50</height>
+            <texturefocus>menubutt_focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+            <onup>1002</onup>
+            <ondown>1002</ondown>
+            <onleft>1005</onleft>
+            <onright>1006</onright>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>tvg_font13</font>
+            <textcolor>ffffffff</textcolor>
+            <label>Search</label>
+        </control>
+
+		<control type="button" id="1006"><!-- MAINMENU -->
+            <posx>768</posx>
+            <posy>670</posy>
+            <width>256</width>
+            <height>50</height>
+            <texturefocus>menubutt_focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+            <onup>1002</onup>
+            <ondown>1002</ondown>
+            <onleft>1003</onleft>
+            <onright>1004</onright>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>tvg_font13</font>
+            <textcolor>ffffffff</textcolor>
+        </control>
+
+
+
+        <control type="button" id="1004"><!-- Exit Guide-->
+            <posx>1024</posx>
+            <posy>670</posy>
+            <width>256</width>
+            <height>50</height>
+            <texturefocus>menubutt_focus.png</texturefocus>
+			<texturenofocus></texturenofocus>
+            <onup>1002</onup>
+            <ondown>1002</ondown>
+            <onleft>1006</onleft>
+            <onright>999</onright>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>tvg_font13</font>
+            <textcolor>ffffffff</textcolor>
+			<label>Exit Guide</label>
+			<visible>true</visible>
+        </control>
+
+ 
+        <control type="group">
+            <description>Program List</description>
+            <visible>true</visible>
+            <control type="group">
+                <left>0</left>
+                <top>240</top>
+                <control type="label">
+                    <description>Channel label</description>
+                    <left>80</left>
+                    <top>-17</top>
+                    <width>180</width>
+                    <height>42</height>
+                    <font>font13_title</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <label>[B]Channel[/B]</label>
+                    <visible>true</visible>
+                </control>
+                <control type="label">
+                    <description>Time label</description>
+                    <left>357</left>
+                    <top>-17</top>
+                    <width>200</width>
+                    <height>42</height>
+                    <font>font13_title</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <label>[B]Program[/B]</label>
+                    <visible>true</visible>
+                </control>
+                <control type="label">
+                    <description>Length</description>
+                    <left>775</left>
+                    <top>-17</top>
+                    <width>92</width>
+                    <height>42</height>
+                    <font>font13_title</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <label>[B]Time[/B]</label>
+                    <visible>true</visible>
+                </control>
+                <control type="label">
+                    <description>Title</description>
+                    <left>975</left>
+                    <top>-17</top>
+                    <width>100</width>
+                    <height>42</height>
+                    <font>font13_title</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <label>[B]Day[/B]</label>
+                    <visible>true</visible>
+                </control>
+
+                <control type="label">
+                    <description>Title</description>
+                    <left>1140</left>
+                    <top>-17</top>
+                    <width>100</width>
+                    <height>42</height>
+                    <font>font13_title</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <label>[B]Duration[/B]</label>
+                    <visible>true</visible>
+                </control>
+                <control type="image">
+                    <description>separator image</description>
+                    <left>0</left>
+                    <top>50</top>
+                    <width>1280</width>
+                    <height>1</height>
+                    <colordiffuse>88FFFFFF</colordiffuse>
+                    <texture>tvg-seperator.png</texture>
+                </control>
+                <control type="list" id="1002">
+                    <viewtype label="19030">list</viewtype>
+                    <left>0</left>
+                    <top>26</top>
+                    <width>1280</width>
+                    <height>400</height>
+                    <onup>1003</onup>
+                    <ondown>1003</ondown>
+                    <onleft>999</onleft>
+                    <onright>1004</onright>
+                    <pagecontrol>-</pagecontrol>
+                    <itemlayout height="50">
+                        <control type="image">
+                            <left>0</left>
+                            <top>0</top>
+                            <width>58</width>
+                            <height>50</height>
+                            <texture>tvguide-program-grey.png</texture>
+                            <visible>true</visible>
+                        </control>
+                        <control type="image">
+                            <left>0</left>
+                            <top>0</top>
+                            <width>58</width>
+                            <height>50</height>
+                            <texture flipy="true">tvguide-program-grey.png</texture>
+                            <visible>true</visible>
+                        </control>
+
+                        <control type="image">
+                            <left>60</left>
+                            <top>0</top>
+                            <width>249</width>
+                            <height>50</height>
+                            <texture>bg(1).png</texture>
+                            <visible>true</visible>
+                        </control>
+
+                        <control type="image">
+                            <left>60</left>
+                            <top>0</top>
+                            <width>249</width>
+                            <height>50</height>
+                            <texture>tvguide-program-grey.png</texture>
+                            <visible>true</visible>
+                        </control>
+                        <control type="image">
+                            <left>60</left>
+                            <top>0</top>
+                            <width>249</width>
+                            <height>50</height>
+                            <texture flipy="true">tvguide-program-grey.png</texture>
+                            <visible>true</visible>
+                        </control>
+
+                        <control type="image">
+                            <left>311</left>
+                            <top>0</top>
+                            <width>1028</width>
+                            <height>50</height>
+                            <texture>tvguide-program-grey.png</texture>
+                            <visible>true</visible>
+                        </control>
+                        <control type="image">
+                            <left>311</left>
+                            <top>0</top>
+                            <width>1028</width>
+                            <height>50</height>
+                            <texture flipy="true">tvguide-program-grey.png</texture>
+                            <visible>true</visible>
+                        </control>
+                        <control type="image">
+                            <left>16.5</left>
+                            <top>12.5</top>
+                            <width>25</width>
+                            <height>25</height>
+                            <info>ListItem.Property(Remind)</info>
+                            <aligny>center</aligny>
+                        </control>
+
+                        <control type="image">
+                            <left>80</left>
+                            <top>15</top>
+                            <width>55</width>
+                            <height>20</height>
+                            <info>ListItem.Icon</info>
+                            <aligny>center</aligny>
+                        </control>
+                        <control type="label">
+                            <left>355</left>
+                            <top>0</top>
+                            <width>400</width>
+                            <height>50</height>
+                            <font>font13</font>
+                            <textcolor>ffffffff</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <info>ListItem.Label</info>
+                        </control>
+                        <control type="label">
+                            <left>165</left>
+                            <top>0</top>
+                            <width>135</width>
+                            <height>50</height>
+                            <font>font13</font>
+                            <textcolor>white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <info>ListItem.Property(ChannelName)</info>
+                        </control>
+                        <control type="label">
+                            <left>775</left>
+                            <top>0</top>
+                            <width>92</width>
+                            <height>50</height>
+                            <font>font13</font>
+                            <textcolor>white</textcolor>
+                            <align>right</align>
+                            <aligny>center</aligny>
+                            <info>ListItem.Property(StartTime)</info>
+                        </control>
+                        <control type="label">
+                            <left>975</left>
+                            <top>0</top>
+                            <width>110</width>
+                            <height>50</height>
+                            <font>font13</font>
+                            <textcolor>white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <info>ListItem.Property(Day)</info>
+                        </control>
+                        <control type="progress">
+                            <left>1142</left>
+                            <top>25</top>
+                            <width>80</width>
+                            <height>4</height>
+                            <lefttexture />
+                            <righttexture />
+                            <texturebg >tvg-progress-bg.png</texturebg>
+                            <midtexture >tvg-progress-mid.png</midtexture>
+                            <info>ListItem.Property(Completed)</info>
+                            <visible>false</visible>
+                        </control>
+                        <control type="label">
+                            <description>Program Title</description>
+                            <left>1140</left>
+                            <top>0</top>
+                            <width>100</width>
+                            <height>50</height>
+                            <font>font13</font>
+                            <textcolor>white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <info>ListItem.Property(Duration)</info>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="50">
+                        <control type="image">
+                            <left>0</left>
+                            <top>0</top>
+                            <width>58</width>
+                            <height>50</height>
+                            <texture>tvguide-program-grey.png</texture>
+                            <visible>true</visible>
+                        </control>
+                        <control type="image">
+                            <left>0</left>
+                            <top>0</top>
+                            <width>58</width>
+                            <height>50</height>
+                            <texture flipy="true">tvguide-program-grey.png</texture>
+                            <visible>true</visible>
+                        </control>
+
+                        <control type="image">
+                            <left>60</left>
+                            <top>0</top>
+                            <width>249</width>
+                            <height>50</height>
+                            <texture>bg(1).png</texture>
+                            <visible>true</visible>
+                        </control>
+
+                        <control type="image">
+                            <left>60</left>
+                            <top>0</top>
+                            <width>249</width>
+                            <height>50</height>
+                            <texture>tvguide-program-grey.png</texture>
+                            <visible>true</visible>
+                        </control>
+                        <control type="image">
+                            <left>60</left>
+                            <top>0</top>
+                            <width>249</width>
+                            <height>50</height>
+                            <texture flipy="true">tvguide-program-grey.png</texture>
+                            <visible>true</visible>
+                        </control>
+
+                        <control type="image">
+                            <left>311</left>
+                            <top>0</top>
+                            <width>1028</width>
+                            <height>50</height>
+                            <texture>tvguide-program-grey-focus.png</texture>
+                            <visible>true</visible>
+                        </control>
+                        <control type="image">
+                            <left>311</left>
+                            <top>0</top>
+                            <width>1028</width>
+                            <height>50</height>
+                            <texture flipy="true">tvguide-program-grey.png</texture>
+                            <visible>true</visible>
+                        </control>
+
+                        <control type="image">
+                            <left>80</left>
+                            <top>15</top>
+                            <width>55</width>
+                            <height>20</height>
+                            <info>ListItem.Icon</info>
+                            <aligny>center</aligny>
+                        </control>
+
+                        <control type="image">
+                            <left>16.5</left>
+                            <top>12.5</top>
+                            <width>25</width>
+                            <height>25</height>
+                            <info>ListItem.Property(Remind)</info>
+                            <aligny>center</aligny>
+                        </control>
+                        <control type="label">
+                            <left>355</left>
+                            <top>0</top>
+                            <width>400</width>
+                            <height>50</height>
+                            <font>font13</font>
+                            <textcolor>ffffffff</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <scroll time="3600" delay="6000" repeat="6000">true</scroll>
+                            <info>ListItem.Label</info>
+                        </control>
+                        <control type="label">
+                            <left>165</left>
+                            <top>0</top>
+                            <width>135</width>
+                            <height>50</height>
+                            <font>font13</font>
+                            <textcolor>white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <scroll time="3600" delay="6000" repeat="6000">true</scroll>
+                            <info>ListItem.Property(ChannelName)</info>
+                        </control>
+                        <control type="label">
+                            <left>775</left>
+                            <top>0</top>
+                            <width>92</width>
+                            <height>50</height>
+                            <font>font13</font>
+                            <textcolor>white</textcolor>
+                            <align>right</align>
+                            <aligny>center</aligny>
+                            <info>ListItem.Property(StartTime)</info>
+                        </control>
+                        <control type="label">
+                            <left>975</left>
+                            <top>0</top>
+                            <width>110</width>
+                            <height>50</height>
+                            <font>font13</font>
+                            <textcolor>white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <info>ListItem.Property(Day)</info>
+                        </control>
+                        <control type="progress">
+                            <left>1142</left>
+                            <top>25</top>
+                            <width>80</width>
+                            <height>4</height>
+                            <lefttexture />
+                            <righttexture />
+                            <texturebg >tvg-progress-bg.png</texturebg>
+                            <midtexture >tvg-progress-mid.png</midtexture>
+                            <info>ListItem.Property(Completed)</info>
+                            <visible>false</visible>
+                        </control>
+                        <control type="label">
+                            <description>Program Title</description>
+                            <left>1140</left>
+                            <top>0</top>
+                            <width>100</width>
+                            <height>50</height>
+                            <font>font13</font>
+                            <textcolor>white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <info>ListItem.Property(Duration)</info>
+                        </control>
+
+                    </focusedlayout>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>
